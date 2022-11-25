@@ -1,11 +1,12 @@
 body {
 	font-family: 'Droid Sans', arial, serif;
+    margin: auto;
 }
 
 
 @font-face {
     font-family: 'New Super Mario Font U';
-    src: url('assets_fansite/NewSuperMarioFontU.woff') format('woff');
+    src: url('./assets_fansite/NewSuperMarioFontU.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,33 +19,35 @@ body {
 h1 {
     display: inline;
     font-family: 'New Super Mario Font U';
-    background-image: url('assets_fansite/layout_gold.png');
+    background-image: url('./assets_fansite/layout_gold.png');
     background-size: cover;
     color: white;
     text-shadow: 2px 2px 0px black;
     text-align: center;
     background-size: 100% 100%;
     padding: 20px 30px;
+    white-space: nowrap;
 }
-
-/* .mario_font_w_layout {
-	display: inline;
-	font-family: 'New Super Mario Font U';
-	background-image: url('assets_fansite/layout_gold.png');
-	background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 0px black;
-	text-align: center;
-    background-size: 100% 100%;
-}*/
 
 .bg_items {
     background-color: gold;
-    background-image: url('assets_fansite/bg_items.png');
+    background-image: url('./assets_fansite/bg_items.png');
 }
 .bg_coins {
     background-color: gold;
-    background-image: url('assets_fansite/bg_coins.png');
+    background-image: url('./assets_fansite/bg_coins.png');
+}
+.bg_leaf {
+    background-color: gold;
+    background-image: url('./assets_fansite/bg_leaf.png');
+}
+.bg_mushroom {
+    background-color: gold;
+    background-image: url('./assets_fansite/bg_mushroom.png');
+}
+.bg_flower {
+    background-color: gold;
+    background-image: url('./assets_fansite/bg_flower.png');
 }
 
 header {
@@ -90,19 +93,85 @@ nav a:hover{
 }
 
 footer {
-    width: 100%;
     height: 252px;
-    background-image: url('assets_fansite/grass_further_gradiant.jpg');
+    display: flex;
+    align-items: center;
 }
 
-.bg_grassland {
+footer p {
+    display: inline;
+    white-space: nowrap;
+    font-size: 2.1vw;
+}
+
+footer a:link { text-decoration: none; color: white; font-family: 'New Super Mario Font U'; text-shadow: 2px 2px 0px black; }
+footer a:visited { text-decoration: none; color: white; font-family: 'New Super Mario Font U'; text-shadow: 2px 2px 0px black; }
+footer a:hover { text-decoration: none; color: white; font-family: 'New Super Mario Font U'; text-shadow: 2px 2px 0px black; }
+footer a:active { text-decoration: none; color: white; font-family: 'New Super Mario Font U'; text-shadow: 2px 2px 0px black; }
+
+.pipe_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pipe_green {
+    width: 18vw;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-end;    /*align text to right*/
+    display: flex;
+    background-size: contain;
+    background-image: url('./assets_fansite/pipes/pipe_center_green.png');
+}
+
+.pipe_purple {
+    width: 30vw;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-end;    /*align text to right*/
+    display: flex;
+    background-size: contain;
+    background-image: url('./assets_fansite/pipes/pipe_center_purple.png');
+}
+
+.pipe_red {
+    width: 26vw;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-start;    /*align text to left*/
+    display: flex;
+    background-size: contain;
+    background-image: url('./assets_fansite/pipes/pipe_center_red.png');
+}
+
+.pipe_blue {
+    width: 33vw;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-start;    /*align text to left*/
+    display: flex;
+    background-size: contain;
+    background-image: url('./assets_fansite/pipes/pipe_center_blue.png');
+}
+
+.land_grass { background-image: url('./assets_fansite/grass_further_gradiant.jpg'); }
+.land_desert { background-image: url('./assets_fansite/sand_further_gradiant.jpg'); }
+.land_jungle { background-image: url('./assets_fansite/jungle_further_liquid.jpg'); }
+.land_sky { background-image: url('./assets_fansite/sky_further_gradiant.jpg'); }
+
+main {
     margin: -16px 0px;
-    background-color: #26a2fc;
-    background-image: url('assets_fansite/land_backgrounds/bg_grassland.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% 503px;
+    background-color: #26a2fc;
 }
+
+.bg_grassland { background-image: url('assets_fansite/land_backgrounds/bg_grassland.jpg'); background-size:max(100vmax, 252px); }
+.bg_desert { background-image: url('assets_fansite/land_backgrounds/bg_desert.jpg'); background-size:max(100vmax, 252px); }
+.bg_jungle { background-image: url('assets_fansite/land_backgrounds/bg_jungle.jpg'); background-size:max(100vmax, 252px); }
+.bg_sky_blocks { background-image: url('assets_fansite/land_backgrounds/bg_sky_blocks.jpg'); background-size:max(100vmax, 252px); }
+.bg_sky_mushrooms { background-image: url('assets_fansite/land_backgrounds/bg_sky_mushrooms.jpg'); background-size:max(100vmax, 252px); }
 
 .box_container {
     margin: auto;
@@ -120,7 +189,7 @@ footer {
     box-shadow: 5px 5px 5px black;
 }*/
 
-.message_box {
+section {
     border: 4mm ridge rgba(130, 118, 118, 1);
     background-image: url('assets_fansite/bg_box.jpg');
     border-radius: 20px 20px 20px 20px;
@@ -128,25 +197,29 @@ footer {
     box-shadow: 5px 5px 5px black;
 }
 
-.message_box a:link { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
-.message_box a:visited { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
-.message_box a:hover { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
-.message_box a:active { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
+section > div { margin: 0px 14%; text-align: left; }
+
+section a:link { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
+section a:visited { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
+section a:hover { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
+section a:active { text-decoration: none; color: black; font-size: 24px; font-family: 'New Super Mario Font U'; }
 
 .left_right_container {
     margin: 0px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
-.left_right_container > .message_box:nth-child(2n) {
+.left_right_container > section:nth-child(2n) {
+    width: 75%;
     align-self: flex-end;
     text-align: right;
 }
 
-.left_right_container > .message_box:nth-child(2n+1) {
+.left_right_container > section:nth-child(2n+1) {
+    width: 75%;
     align-self: flex-start;
     text-align: left;
 }
