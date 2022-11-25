@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
-	<title>Home - NSMB2 Modding Fansite</title>
+	<title>Form - NSMB2 Modding Fansite</title>
 	<link rel="icon" href="./assets_fansite/icon.jpg" sizes="48x48" />
 	<link rel="stylesheet" href="./fansite.css">
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -26,33 +26,39 @@
 				<li><a class="mario_font" href="./mods.html">Mods/News</a></li>
 				<li><a class="mario_font" href="./tools.html">Tools</a></li>
 				<li><a class="mario_font" href="./forums.html">Community Forums</a></li>
-				<!--<li><a class="mario_font" href="tutorials.html">Tutorials</a></li>-->
 				<li><a class="mario_font" href="./videos.html">Modding Directs</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<main class="bg_grassland"> <!-- style="height: 820px;" -->
+	<main class="bg_grassland">
 		<br>
 		<br>
 		<div class="box_container">
 			<section class="message_box">
-				<h1>Fansite of the world's most capitalist game!</h1>
+				<h1>Form</h1>
 				<div style="text-align: center;">
-					<h3>Find on this website all the News, Tools and Community made content of <span class="mario_font" style="font-size: 24px;">New Super Mario Bros. 2</span> !</h3>
-				</div>
-			</section>
-			<section style="width: 50%; margin: auto;">
-				<h1>Where to start ?</h1>
-				<div>
-					<!--<h3>Why not head over to the <a href="tutorials.html">Tutorials</a> section ?</h3>-->
-					<h3>Need to ask for support ? Pick a forum in the <a href="./forums.html"><b>Community Forums</b></a> section and ask the community for help !</h3>
-				</div>
-			</section>
-			<section style="width: 70%; margin: auto;">
-				<h1 style="padding: 20px 60px;">How to reach us ?</h1>
-				<div>
-					<h3>You have a question about this website ? Something about us ?</h3><h3>Feel free to contact me at <a href="mailto:erwan.blancard@laplateforme.io" target="_blank" rel="noopener">erwan.blancard@laplateforme.io</a> or send me a <a href="./form.html">Form</a> !</h3>
+					<h3>Please fill this form and we'll reach to you later :</h3>
+					<form method="post" action="/fansite/form.html" id="form" data-hs-cf-bound="true">
+						<p data-id="information" data-type="select">
+							<label>Why do you want to contact me ?</label>
+							<select name="add_request" data-required_mark="required" data-field_type="select" data-original_id="add_request">
+								<option value="">&lt;choose answer&gt;</option><option value="add_forum">I want you to add a FORUM to the forum list</option><option value="add_mod">I want you to add a MOD to the mod list</option><option value="add_tool">I want you to add a TOOL to the tool list</option><option value="other">Other</option>
+							</select>
+						</p>
+						<p data-id="email" data-type="input">
+							<label for="email">Email</label>
+							<input type="text" id="email" class="input" value="" name="email" data-required_mark="required" data-field_type="input" data-original_id="email" placeholder="someone@example.com">
+						</p>
+						<p data-id="message" data-type="text">
+							<label for="message">Message</label>
+							<textarea name="message" data-required_mark="required" data-field_type="text" data-original_id="message" placeholder="Message" rows="7" cols="77"></textarea>
+						</p>
+						<div>
+							<button type="submit" name="submit_button" class="submit_button" style="margin: 0px 25%;">Send (no PHP haha)</button>
+							<p>&nbsp;</p>
+						</div>
+					</form>
 				</div>
 			</section>
 		</div>

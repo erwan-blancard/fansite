@@ -223,3 +223,17 @@ section a:active { text-decoration: none; color: black; font-size: 24px; font-fa
     align-self: flex-start;
     text-align: left;
 }
+
+.submit_button {
+    display: inline;
+    font-family: 'New Super Mario Font U';
+    background-image: url('./assets_fansite/layout_gold.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    text-align: center;
+    background-size: 100% 100%;
+    padding: 20px 30px;
+    font-size: 24px;
+    white-space: nowrap;
+}
