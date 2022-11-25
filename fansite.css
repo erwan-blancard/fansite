@@ -191,6 +191,7 @@ main {
 
 section {
     border: 4mm ridge rgba(130, 118, 118, 1);
+    background-color: gold; /*gold background if background-image is not loaded yet*/
     background-image: url('assets_fansite/bg_box.jpg');
     border-radius: 20px 20px 20px 20px;
     text-align: center;
